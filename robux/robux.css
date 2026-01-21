@@ -1,0 +1,51 @@
+/* © Все права защищены.
+Настоящий файл охраняется законодательством об авторском праве.
+Любое копирование, распространение, публичное воспроизведение, модификация или использование данного файла, полностью или частично, в коммерческих и некоммерческих целях без письменного разрешения правообладателя строго запрещено и может повлечь юридическую ответственность.
+*/
+body {
+    margin: 0; font-family: 'Montserrat', sans-serif;
+    background: #191b1d; color: white;
+}
+.store-ui {
+    display: flex; flex-direction: column; height: 100vh;
+}
+.top-bar {
+    height: 60px; background: #232527; display: flex; align-items: center; padding: 0 20px;
+    border-bottom: 1px solid #393b3d; justify-content: space-between;
+}
+#btn-back {
+    background: transparent; border: 1px solid white; color: white;
+    padding: 8px 15px; border-radius: 5px; cursor: pointer;
+}
+#btn-back:hover { background: white; color: black; }
+.current-balance-display {
+    font-weight: bold; font-size: 18px; color: #00b894;
+}
+
+.packages-container {
+    flex: 1; padding: 40px; overflow-y: auto; text-align: center;
+}
+.grid {
+    display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;
+}
+.package-card {
+    background: #393b3d; width: 200px; padding: 20px; border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center;
+    border: 2px solid transparent; position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s;
+}
+.package-card:hover { transform: translateY(-5px); border-color: #555; }
+.package-card.popular { border-color: white; background: #444; }
+
+.badge {
+    position: absolute; top: -10px; background: white; color: black;
+    font-size: 10px; padding: 4px 8px; border-radius: 10px; font-weight: bold;
+}
+.icon { font-size: 40px; margin-bottom: 10px; }
+.amount { font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+.buy-btn {
+    width: 100%; padding: 10px; border: none; border-radius: 5px;
+    background: #00b894; color: white; font-weight: bold; cursor: pointer; font-size: 16px;
+}
+.buy-btn:hover { opacity: 0.9; }
+.buy-btn:active { transform: scale(0.95); }

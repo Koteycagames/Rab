@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Robux</title>
+    <link rel="stylesheet" href="robux.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="store-ui">
+        <div class="top-bar">
+            <button id="btn-back">⬅ Назад в меню</button> 
+            <h1>Магазин Robux</h1>
+            <div class="current-balance-display">
+                Баланс: <span id="current-balance">...</span> ⬢
+            </div>
+        </div>
+
+        <div class="packages-container">
+            <h2>Выберите пакет</h2>
+            <div class="grid">
+                
+                <div class="package-card">
+                    <div class="icon">⬢</div>
+                    <div class="amount">40 Robux</div>
+                    <button class="buy-btn" data-amount="40">$0.49</button>
+                </div>
+
+                <div class="package-card">
+                    <div class="icon">⬢</div>
+                    <div class="amount">80 Robux</div>
+                    <button class="buy-btn" data-amount="80">$0.99</button>
+                </div>
+
+                <div class="package-card popular">
+                    <div class="badge">POPULAR</div>
+                    <div class="icon">⬢</div>
+                    <div class="amount">400 Robux</div>
+                    <button class="buy-btn" data-amount="400">$4.99</button>
+                </div>
+
+                <div class="package-card">
+                    <div class="icon">⬢</div>
+                    <div class="amount">800 Robux</div>
+                    <button class="buy-btn" data-amount="800">$9.99</button>
+                </div>
+                
+                <div class="package-card" style="border-color: #00b894;">
+                    <div class="icon" style="color:#00b894">⬢</div>
+                    <div class="amount">10,000 Robux</div>
+                    <button class="buy-btn" data-amount="10000">БЕСПЛАТНО (TEST)</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="robux.js"></script>
+</body>
+</html>
