@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox - Меню</title>
+    <link rel="stylesheet" href="menu.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="top-nav">
+        <div id="btn-robux-nav" class="robux-display">
+            <div class="robux-icon">⬢</div>
+            <span>Магазин</span>
+        </div>
+    </div>
+
+    <div id="lobby-screen">
+        <div class="sidebar">
+            <div class="sidebar-icon" id="btn-home">🏠</div>
+            <div class="sidebar-icon" id="btn-editor">👤</div>
+            <div class="sidebar-icon">💬</div>
+            <div class="sidebar-icon" id="btn-logout" style="color: red;">🚪</div>
+        </div>
+        <div class="content-area">
+            <div class="user-greeting">
+                <div class="avatar-circle"></div>
+                <span id="lobby-username">Загрузка...</span>
+            </div>
+            
+            <div class="section-title">Continue Playing</div>
+            
+            <div class="games-grid">
+                <div class="game-card" id="play-test-game">
+                    <div class="game-thumb">
+                        T
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <div class="game-title">Test Place</div>
+                    <div class="game-creator">By You</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="menu.js"></script>
+</body>
+</html>
