@@ -1,0 +1,42 @@
+/* © Все права защищены.
+Настоящий файл охраняется законодательством об авторском праве.
+Любое копирование, распространение, публичное воспроизведение, модификация или использование данного файла, полностью или частично, в коммерческих и некоммерческих целях без письменного разрешения правообладателя строго запрещено и может повлечь юридическую ответственность.
+*/
+body {
+    margin: 0; font-family: 'Montserrat', sans-serif;
+    background: #191b1d; color: white;
+}
+.editor-ui {
+    display: flex; flex-direction: column; height: 100vh;
+}
+.top-bar {
+    height: 60px; background: #232527; display: flex; align-items: center; padding: 0 20px;
+    border-bottom: 1px solid #393b3d;
+}
+#btn-back {
+    background: transparent; border: 1px solid white; color: white;
+    padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-right: 20px;
+}
+#btn-back:hover { background: white; color: black; }
+
+.editor-content {
+    flex: 1; display: flex;
+}
+.preview-area {
+    flex: 2; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(circle, #2d3436, #191b1d);
+}
+.placeholder-avatar { font-size: 150px; }
+
+.controls-area {
+    flex: 1; background: #232527; padding: 20px; border-left: 1px solid #393b3d;
+}
+.color-btn {
+    width: 40px; height: 40px; border-radius: 50%; display: inline-block;
+    margin: 5px; cursor: pointer; border: 2px solid transparent;
+}
+.color-btn:hover { border-color: white; }
+button {
+    display: block; width: 100%; padding: 10px; margin-top: 10px;
+    background: #393b3d; color: #888; border: none; border-radius: 5px;
+}
