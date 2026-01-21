@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>Roblox Game</title>
+    <link rel="stylesheet" href="game.css">
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="game-ui">
+        <div id="top-bar-game">
+            <div class="roblox-logo">ROBLOX</div>
+            <button id="exit-game-btn">☰</button>
+        </div>
+        
+        <div id="joystick-zone"><div id="joystick-knob"></div></div>
+        
+        <div id="camera-zone"></div>
+        
+        <button id="jump-btn"></button>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
