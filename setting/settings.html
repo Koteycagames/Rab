@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - Age Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+    <style>
+        body { background: #191b1d; color: white; font-family: 'Montserrat', sans-serif; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        
+        /* Видео и канвас */
+        .camera-container { position: relative; width: 100%; max-width: 400px; margin: 0 auto; }
+        video { width: 100%; border-radius: 10px; border: 2px solid #555; transform: scaleX(-1); /* Зеркалим */ }
+        canvas { position: absolute; top: 0; left: 0; } /* Для отрисовки рамки лица */
+
+        button { 
+            padding: 15px 30px; font-size: 18px; margin-top: 20px; border-radius: 10px; border: none; cursor: pointer; 
+            background: #0984e3; color: white; width: 100%;
+        }
+        button:disabled { background: #555; cursor: not-allowed; }
+        
+        .status-box { background: #2d3436; padding: 15px; margin: 20px 0; border-radius: 10px; }
+        .warning { color: #fdcb6e; font-size: 12px; margin-top: 10px; }
+        
+        #back-btn { background: transparent; border: 1px solid white; width: auto; padding: 10px; margin-bottom: 20px; }
+        #loading-text { color: #00b894; font-weight: bold; margin-top: 10px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="back-btn">⬅ Назад в меню</button>
+        <h1>Подтверждение Возраста</h1>
+        
+        <div class="status-box">
+            Текущий статус: <span id="current-status">Загрузка...</span><br>
+            Ваша группа: <span id="current-group">...</span>
+        </div>
+
+        <div class="camera-container">
+            <video id="video" autoplay muted playsinline></video>
+            </div>
+
+        <button id="btn-scan" disabled>⏳ Загрузка Нейросети...</button>
+        <p id="loading-text">Думаю...</p>
+        
+        <p class="warning">Нейросеть определит ваш возраст. <br>Если вы старше 16 лет, потребуется ручная проверка администратором.</p>
+        
+        <canvas id="snapshot-canvas" style="display:none;"></canvas>
+    </div>
+
+    <script type="module" src="settings.js"></script>
+</body>
+</html>
