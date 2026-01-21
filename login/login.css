@@ -1,0 +1,26 @@
+body { 
+    margin: 0; font-family: 'Montserrat', sans-serif; 
+    background: #232527; color: white; 
+    display: flex; align-items: center; justify-content: center; height: 100vh;
+}
+.logo {
+    margin-bottom: 20px; font-size: 30px; font-weight: 900; letter-spacing: 2px; text-align: center;
+}
+.auth-box {
+    background: #393b3d; padding: 25px; border-radius: 12px; 
+    text-align: center; width: 300px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+h2 { margin-top: 0; }
+input {
+    display: block; width: 90%; padding: 12px; margin: 10px auto;
+    border-radius: 8px; border: 1px solid #a3a3a3; 
+    background: #232527; color: white; font-size: 16px; outline: none;
+}
+.auth-btn {
+    padding: 12px 0; cursor: pointer; border: none; border-radius: 8px;
+    font-size: 16px; font-weight: bold; margin: 8px auto; width: 95%; display: block;
+}
+#btn-login { background: white; color: black; }
+#btn-register { background: #393b3d; color: white; border: 1px solid white; }
+#error-msg { color: #ff7675; font-size: 12px; margin-top: 10px; }
