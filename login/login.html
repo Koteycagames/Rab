@@ -3,22 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox - Вход</title>
-    <link rel="stylesheet" href="login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Roblox Login</title>
+    <style>
+        body {
+            margin: 0; font-family: 'Montserrat', sans-serif;
+            background: #191b1d; color: white;
+            display: flex; align-items: center; justify-content: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #232527; width: 400px; padding: 30px;
+            border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .tabs { display: flex; margin-bottom: 20px; border-bottom: 2px solid #393b3d; }
+        .tab {
+            flex: 1; padding: 15px; text-align: center; cursor: pointer;
+            font-weight: bold; color: #888; transition: 0.2s;
+        }
+        .tab:hover { color: white; }
+        .tab.active { color: white; border-bottom: 2px solid white; }
+        
+        .form-box { display: flex; flex-direction: column; gap: 15px; }
+        input {
+            padding: 12px; border-radius: 5px; border: 1px solid #393b3d;
+            background: #191b1d; color: white; font-size: 16px;
+        }
+        input:focus { outline: none; border-color: white; }
+        
+        button {
+            padding: 12px; border-radius: 5px; border: none; cursor: pointer;
+            font-size: 16px; font-weight: bold; margin-top: 10px;
+            transition: 0.2s;
+        }
+        .btn-primary { background: white; color: black; }
+        .btn-primary:hover { background: #ddd; }
+        
+        h2 { margin: 0 0 20px 0; text-align: center; }
+    </style>
 </head>
 <body>
-    <div id="login-screen">
-        <div class="logo">ROBLOX</div>
-        <div class="auth-box">
-            <h2>Вход</h2>
-            <input type="text" id="username" placeholder="Имя пользователя">
-            <input type="password" id="password" placeholder="Пароль">
-            <button class="auth-btn" id="btn-login">Войти</button>
-            <button class="auth-btn" id="btn-register">Регистрация</button>
-            <p id="error-msg"></p>
+
+    <div class="login-container">
+        <h2>ROBLOX CLONE</h2>
+        
+        <div class="tabs">
+            <div class="tab active" id="tab-login">Вход</div>
+            <div class="tab" id="tab-register">Регистрация</div>
+        </div>
+
+        <div id="login-form" class="form-box">
+            <input type="email" id="login-email" placeholder="Email / Почта">
+            <input type="password" id="login-pass" placeholder="Password / Пароль">
+            <button class="btn-primary" id="btn-login-action">Войти</button>
+        </div>
+
+        <div id="register-form" class="form-box" style="display: none;">
+            <input type="email" id="reg-email" placeholder="Email для регистрации">
+            <input type="password" id="reg-pass" placeholder="Придумайте пароль (мин 6 символов)">
+            <button class="btn-primary" id="btn-register-action">Создать аккаунт</button>
         </div>
     </div>
+
     <script type="module" src="login.js"></script>
 </body>
 </html>
