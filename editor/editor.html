@@ -5,32 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avatar Editor</title>
     <link rel="stylesheet" href="editor.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="editor-ui">
         <div class="top-bar">
-            <button id="btn-back">⬅ Назад в меню</button>
-            <h1>Редактор Скина</h1>
+            <button id="btn-back">⬅ Назад</button>
+            <h1>Редактор Персонажа</h1>
+            <div class="balance-box">Баланс: <span id="user-robux">...</span> R$</div>
         </div>
         
         <div class="editor-content">
-            <div class="preview-area">
-                <div class="placeholder-avatar">🧍</div>
-            </div>
+            <div id="preview-container"></div>
+
             <div class="controls-area">
-                <h2>Цвет кожи</h2>
-                <div class="color-btn" style="background:#f1c27d;"></div>
-                <div class="color-btn" style="background:#8d5524;"></div>
-                <div class="color-btn" style="background:#ffdbac;"></div>
-                <div class="color-btn" style="background:#e0ac69;"></div>
-                
-                <h2>Одежда (Скоро)</h2>
-                <button disabled>Футболки</button>
-                <button disabled>Штаны</button>
+                <h2>Выберите часть тела:</h2>
+                <div class="parts-selector">
+                    <button class="part-btn active" data-part="head">Голова</button>
+                    <button class="part-btn" data-part="torso">Торс</button>
+                    <button class="part-btn" data-part="leftArm">Л. Рука</button>
+                    <button class="part-btn" data-part="rightArm">П. Рука</button>
+                    <button class="part-btn" data-part="leftLeg">Л. Нога</button>
+                    <button class="part-btn" data-part="rightLeg">П. Нога</button>
+                </div>
+
+                <h2>Выберите цвет (15 R$):</h2>
+                <div class="color-grid">
+                    <div class="color-btn" style="background:#f1c27d;" data-hex="#f1c27d"></div> <div class="color-btn" style="background:#0984e3;" data-hex="#0984e3"></div> <div class="color-btn" style="background:#55efc4;" data-hex="#55efc4"></div> <div class="color-btn" style="background:#d63031;" data-hex="#d63031"></div> <div class="color-btn" style="background:#2d3436;" data-hex="#2d3436"></div> <div class="color-btn" style="background:#dfe6e9;" data-hex="#dfe6e9"></div> <div class="color-btn" style="background:#6c5ce7;" data-hex="#6c5ce7"></div> <div class="color-btn" style="background:#e17055;" data-hex="#e17055"></div> <div class="color-btn" style="background:#fdcb6e;" data-hex="#fdcb6e"></div> <div class="color-btn" style="background:#00b894;" data-hex="#00b894"></div> </div>
+
+                <div class="stickers-section">
+                    <h2>Наклейки</h2>
+                    <button disabled style="opacity:0.5; width:100%;">Скоро...</button>
+                </div>
             </div>
         </div>
     </div>
-    <script src="editor.js"></script>
+    <script type="module" src="editor.js"></script>
 </body>
 </html>
